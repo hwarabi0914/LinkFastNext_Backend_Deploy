@@ -1,0 +1,24 @@
+# 環境変数
+.env
+
+# 仮想環境
+venv/
+
+# Pythonキャッシュ
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# データベースファイル
+*.db
+
+# SSL証明書など
+*.pem
+
+# IDE設定
+.vscode/
+
+# OS不要ファイル
+.DS_Store
+Thumbs.db
