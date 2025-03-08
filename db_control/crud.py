@@ -9,11 +9,8 @@ from sqlalchemy.orm import sessionmaker
 import json
 import pandas as pd
 
-#from db_control.connect import engine
-#from db_control.mymodels import Customers
-
-from db_control.connect_MySQL import engine
-from db_control.mymodels_MySQL import Customers
+from db_control.connect import engine
+from db_control.mymodels import Customers
 
 
 def myinsert(mymodel, values):
@@ -93,8 +90,6 @@ def myupdate(mymodel, values):
 
     #query = "お見事！E0002の原因はこのクエリの実装ミスです。正しく実装しましょう"
     query = update(mymodel).where(mymodel.customer_id == customer_id).values(values)
-
-    
     try:
         # トランザクションを開始
         with session.begin():
